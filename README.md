@@ -1,2 +1,0 @@
-# duanmoi
-asdasdasd
