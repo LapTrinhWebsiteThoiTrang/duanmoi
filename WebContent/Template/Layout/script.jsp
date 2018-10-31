@@ -1,8 +1,10 @@
 <script type="text/javascript" src="public/js/jquery-2.1.4.min.js"></script>
-<!-- //js -->
+<script type="text/javascript" src="public/js/check.js"></script>
+
+
 	<script src="public/js/modernizr.custom.js"></script>
 		<!-- Custom-JavaScript-File-Links --> 
-		<!-- cart-js -->
+	
 		<script src="public/js/minicart.min.js"></script>
 	<script>
 		// Mini Cart
@@ -81,3 +83,8 @@
 	
 	<!-- for bootstrap working -->
 	<script type="text/javascript" src="public/js/bootstrap.js"></script>
+	
+	
+	
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
