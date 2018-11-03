@@ -5788,7 +5788,58 @@ p.w3ls_para {
 
 
 
+/* CART*/
 
+
+.div_order .web-font{
+font-family: 'Open Sans Condensed', sans-serif;
+font-size: 13px;
+line-height:17px;
+}
+.div_order input[type=text],.div_order  input[type=password], .div_order input[type=text], .div_order input[type=email],.div_order  input[type=tel],.div_order input[type=date],.div_order  select {
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.div_order input[type=text]:focus , .div_order input[type=password]:focus ,.div_order input[type=text]:focus ,.div_order  select:focus {
+    border: 1px solid #0000ff;
+}
+.div_order textarea
+{
+	width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.div_order input[type=button], .div_order input[type=submit], .div_order input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.div_order .right
+{
+	text-align: right;
+}
+.div_order .left
+{
+	text-align: left;
+}
+
+
+/* //CART*/
 
 
 

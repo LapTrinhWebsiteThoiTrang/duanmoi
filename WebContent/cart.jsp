@@ -3,32 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<%@ include file="Template/Layout/head.jsp" %>
-	<script type="text/javascript" src="public/js/jquery-1.11.1.min.js"></script>
-	<script>$(document).ready(function(c) {
-		$('.alert-close1').on('click', function(c){
-			$('.close1').fadeOut('slow', function(c){
-		  		$('.close1').remove();
-			});
-		});	  
-	});
-	</script>
-	<script>$(document).ready(function(c) {
-		$('.alert-close2').on('click', function(c){
-			$('.close2').fadeOut('slow', function(c){
-		  		$('.close2').remove();
-			});
-		});	  
-	});
-	</script>
-	<script>$(document).ready(function(c) {
-		$('.alert-close3').on('click', function(c){
-			$('.close3').fadeOut('slow', function(c){
-		  		$('.close3').remove();
-			});
-		});	  
-	});
-	</script>
-	
+
+		
 <body>
 	<%@ include file="Template/Layout/header.jsp" %>
 	
@@ -92,7 +68,7 @@
 							<input type="number" name="quantity" min="1" max="10" value="1">
 						</form>
 					</div>
-					<div class="price2">
+					<div class="price3">
 						<p>$ 545</p>
 					</div>
 					<div class="clear"></div>
@@ -144,13 +120,32 @@
 </div>
 
 
-
-	
-
-
-
-
 	<%@ include file="Template/Layout/footer.jsp" %>
 	<%@ include file="Template/Layout/script.jsp" %>
+		<script>$(document).ready(function(c) {
+		$('.alert-close1').on('click', function(c){
+			$('.close1').fadeOut('slow', function(c){
+		  		$('.close1').remove();
+			});
+		});	  
+	});
+	</script>
+	<script>$(document).ready(function(c) {
+		$('.alert-close2').on('click', function(c){
+			$('.close2').fadeOut('slow', function(c){
+		  		$('.close2').remove();
+			});
+		});	  
+	});
+	</script>
+	<script>$(document).ready(function(c) {
+		$('.alert-close3').on('click', function(c){
+			$('.close3').fadeOut('slow', function(c){
+		  		$('.close3').remove();
+			});
+		});	  
+	});
+	</script>
+	
 </body>
 </html>
