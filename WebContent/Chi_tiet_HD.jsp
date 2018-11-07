@@ -27,11 +27,6 @@
         </header>
         <div class="khungTong">
             <div class="khung">
-                <!--<ul id="menu">
-                            <li>Quản lý Sản phẩm</li>
-                            <li>Quản lý Người dùng</li>
-                            <li>Thống kê hóa đơn</li>
-                        </ul>-->
                 <div class="positionMenu" class="list-group">
                     <a href="Quan_li_san_pham.jsp" class="list-group-item list-group-item-action list-group-item-secondary">Quản lý Sản phẩm</a>
                     <a href="Quan_li_nguoi_dung.jsp" class="list-group-item list-group-item-action list-group-item-secondary">Quản lý Người dùng</a>
@@ -59,52 +54,22 @@
                     <div class="infor-hoadon">
                         <table id="table">
                             <tr>
-                                <th>Mã đơn hàng</th>
-                                <th>Mã khách hàng</th>
-                                <th>Tên khách hàng</th>
-                                <th>Ngày lập hóa đơn</th>
-                                <th>Tổng tiền</th>
-                                <th>Tình trạng</th>
-                                <th>Lệnh</th>
+                                <th>Mã ĐH</th>
+                                <th>Mã SP</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Size</th>
+                                <th>Tình Trạng</th>
                             </tr>
                             <tr>
                                 <td>1</td>
                                 <td>1</td>
-                                <td>Phạm Thái Vĩnh</td>
-                                <td>28-03-2018</td>
-                                <td>240000</td>
+                                <td>4</td>
+                                <td>400000 VND</td>
+                                <td>M</td>
                                 <td>Hoàn Thành</td>
-                                <td><a href="Chi_tiet_HD.jsp">Chi tiết</a></td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>Võ Phước Sơn</td>
-                                <td>28-03-2018</td>
-                                <td>199000</td>
-                                <td>Chưa Duyệt</td>
-                                <td><a href="#">Duyệt</a></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>Nguyễn Văn A</td>
-                                <td>28-03-2018</td>
-                                <td>5000000</td>
-                                <td>Đã Duyệt</td>
-                                <td>
-                                    <a style="color: red" href="#">Hủy</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>4</td>
-                                <td>Phạm Văn B</td>
-                                <td>28-03-2018</td>
-                                <td>540000</td>
-                                <td>Đã Duyệt<br> Nhưng Chưa Hoàn Thành </td>
-                                <td><a href="Chi_tiet_HD.jsp">Hoàn Thành</a></td>
-                            </tr>
+                           
                         </table>
                     </div>
                 </div>
