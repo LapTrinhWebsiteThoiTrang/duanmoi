@@ -1,5 +1,4 @@
 <script type="text/javascript" src="public/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="public/js/check.js"></script>
 
 
 	<script src="public/js/modernizr.custom.js"></script>
@@ -19,7 +18,7 @@
 	
 		<!-- //cart-js --> 
 		<!-- single -->
-	<script src="public/js/imagezoom.js"></script>
+	<script type="text/javascript" src="public/js/imagezoom.js"></script>
 	<!-- single -->
 	<!-- script for responsive tabs -->						
 	<script src="public/js/easy-responsive-tabs.js"></script>

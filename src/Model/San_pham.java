@@ -10,7 +10,12 @@ public class San_pham {
 	 this.data=new Database();
 	}
 	public ResultSet getSan_pham() {
-		String Sqlquerry="select * from SanPham";
+		String Sqlquerry="exec Lay_san_pham_theo_ma_loai 'aothun_woman'";
 		return this.data.executeQuerry(Sqlquerry);
 	}	
+	public ResultSet getSan_pham_ma_loai() {
+		String Sqlquerry="exec Lay_san_pham_theo_ma_loai 'aothun_woman'";
+		return this.data.executeQuerry(Sqlquerry);
+	}
+	
 }

@@ -1354,8 +1354,6 @@ position:relative;
 }
 .product-men img {
     width: 100%;
-    width:320px;
-    height: 350px;
 }
 /*-- //new_arrivals --*/
 /*-- Shopping-Cart-PopUp --*/
@@ -5644,12 +5642,15 @@ p.w3ls_para {
     border-radius: 5px;
 }
 
-.body1_cart .item1 {
+.body1_cart .item {
 	position: relative;
     margin-bottom: 20px;
 }
+.body1_cart .item {
+    margin-bottom: 0;
+}
 
-.body1_cart .alert-close1 {
+.body1_cart .alert-close{
     background: url('../images/close1.png') no-repeat 0px 0;
     cursor: pointer;
     height: 22px;
@@ -5662,26 +5663,24 @@ p.w3ls_para {
     -o-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
 }
-.body1_cart .image1 {
+.body1_cart .image {
     width: 20%;
     float: left;
 }
 .body1_cart img {
     padding-left: 20px;
-     width: 75px;
-    height: 50px
 }
 
-.body1_cart .title1 {
+.body1_cart .title {
     width: 45%;
     float: left;
 }
-.body1_cart .quantity1 {
+.body1_cart .quantity {
     width: 15%;
     float: left;
     text-align: center;
 }
-.body1_cart .price1 {
+.body1_cart .price {
     width: 20%;
     float: left;
     text-align: center;
@@ -5690,7 +5689,7 @@ p.w3ls_para {
     margin-top: 15px;
     color: #8D8E98;
 }
-.body1_cart .quantity1 input[type="number"] {
+.body1_cart .quantity input[type="number"] {
     width: 70%;
     margin-top: 10px;
     padding: 7px 5px;
@@ -5707,14 +5706,14 @@ p.w3ls_para {
     padding: 0 60px;
     margin: 20px 0;
 }
-.body1_cart .total1, .total2 {
+.body1_cart .total {
     width: 50%;
     float: left;
     font-size: 23px;
     font-weight: bold;
     color: #47484A;
 }
-.body1_cart .total2 {
+.body1_cart .total {
     text-align: right;
 }
 
