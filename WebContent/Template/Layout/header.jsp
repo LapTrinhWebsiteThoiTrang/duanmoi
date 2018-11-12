@@ -75,29 +75,29 @@
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-										<a href="mens.jsp"><img src="public/images//top2.jpg" alt=" "/></a>
+										<a href="Mens"><img src="public/images//top2.jpg" alt=" "/></a>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="mens.jsp">ÁO SƠ MI</a></li>
-											<li><a href="mens.jsp"> ÁO VEST</a></li>
-											<li><a href="mens.jsp">ÁO THUNG</a></li>
-											<li><a href="mens.jsp">ÁO LEN</a></li>
-											<li><a href="mens.jsp">AÓ KHOÁC</a></li>
-											<li><a href="mens.jsp">ĐỒNG HỒ</a></li>
-											<li><a href="mens.jsp">GIÀY</a></li>
-											<li><a href="mens.jsp">VÍ NAM</a></li>
+											<li><a href="Mens?MaLoai=somi_men">ÁO SƠ MI</a></li>
+											<li><a href="Mens?MaLoai=vest_nam"> ÁO VEST</a></li>
+											<li><a href="Mens?MaLoai=thung_men">ÁO THUNG</a></li>
+											<li><a href="Mens?MaLoai=len_men">ÁO LEN</a></li>
+											<li><a href="Mens?MaLoai=khoac_men">AÓ KHOÁC</a></li>
+											<li><a href="Mens?MaLoai=dong_ho_men">ĐỒNG HỒ</a></li>
+											<li><a href="Mens?MaLoai=giay_men">GIÀY</a></li>
+											<li><a href="Mens?MaLoai=vi_men">VÍ NAM</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="mens.jsp">QUẦN JEAN</a></li>
-											<li><a href="mens.jsp">QUẦN JOGGER</a></li>
-											<li><a href="mens.jsp">QUẦN TÂY</a></li>
-											<li><a href="mens.jsp">QUẦN KAKI</a></li>
-											<li><a href="mens.jsp">QUẦN SHORT</a></li>
-                                            <li><a href="mens.jsp">THẮT LƯNG</a></li>
-											<li><a href="mens.jsp">NÓN NAM</a></li>
+											<li><a href="Mens?MaLoai=jean_men">QUẦN JEAN</a></li>
+											<li><a href="Mens?MaLoai=quan_joger_men">QUẦN JOGGER</a></li>
+											<li><a href="Mens?MaLoai=tay_men">QUẦN TÂY</a></li>
+											<li><a href="Mens?MaLoai=kaki_men">QUẦN KAKI</a></li>
+											<li><a href="Mens?MaLoai=short_men">QUẦN SHORT</a></li>
+                                            <li><a href="Mens?MaLoai=that_lung_men">THẮT LƯNG</a></li>
+											<li><a href="Mens?MaLoai=non_men">NÓN NAM</a></li>
 											
 										</ul>
 									</div>
@@ -112,32 +112,32 @@
 									<div class="agile_inner_drop_nav_info">
 										<div class="col-sm-3 multi-gd-img">
 											<ul class="multi-column-dropdown">
-												<li><a href="womans.jsp">ÁO SƠ MI</a></li>
-												<li><a href="womans.jsp">ÁO VEST</a></li>
-												<li><a href="womans.jsp">ÁO THUNG</a></li>
-												<li><a href="womans.jsp">ÁO LÊN</a></li>
-												<li><a href="womans.jsp">ÁO KHOÁC</a></li>
-												<li><a href="womans.jsp">ĐỒNG HỒ</a></li>
-												<li><a href="womans.jsp">TÚI XÁCH</a></li>
-												<li><a href="womans.jsp">THẮT LƯNG</a></li>
+												<li><a href="Womens?MaLoai=somi_women">ÁO SƠ MI</a></li>
+												<li><a href="Womens?MaLoai=vest_woman">ÁO VEST</a></li>
+												<li><a href="Womens?MaLoai=aothun_woman">ÁO THUNG</a></li>
+												<li><a href="Womens?MaLoai=len_woman">ÁO LEN</a></li>
+												<li><a href="Womens?MaLoai=khoac_woman">ÁO KHOÁC</a></li>
+												<li><a href="Womens?MaLoai=dongho_woman">ĐỒNG HỒ</a></li>
+												<li><a href="Womens?MaLoai=tuixach_woman">TÚI XÁCH</a></li>
+												<li><a href="Womens?MaLoai=thatlung_woman">THẮT LƯNG</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-3 multi-gd-img">
 											<ul class="multi-column-dropdown">
-												<li><a href="womans.jsp">QUÁY</a></li>
-												<li><a href="womans.jsp">QUẦN TÂY</a></li>
-												<li><a href="womans.jsp">QUẦN JEAN</a></li>
-												<li><a href="womans.jsp">QUẦN KAKI</a></li>
-												<li><a href="womans.jsp">QUẦN LỮNG</a></li>
-												<li><a href="womans.jsp">VÍ</a></li>
-												<li><a href="womans.jsp">NÓN NỮ</a></li>
+												<li><a href="Womens?MaLoai=vay_woman">QUÁY</a></li>
+												<li><a href="Womens?MaLoai=quantay_woman">QUẦN TÂY</a></li>
+												<li><a href="Womens?MaLoai=jean_woman">QUẦN JEAN</a></li>
+												<li><a href="Womens?MaLoai=kaki_woman">QUẦN KAKI</a></li>
+												<li><a href="Womens?MaLoai=short_woman">QUẦN SHORT</a></li>
+												<li><a href="Womens?MaLoai=vi_woman">VÍ</a></li>
+												<li><a href="Womens?MaLoai=non_woman">NÓN NỮ</a></li>
 											</ul>
 										</div>
 	                                    
 	                                   
 	                                    
 										<div class="col-sm-6 multi-gd-img multi-gd-text ">
-											<a href="womens.jsp"><img src="public/images//top1.jpg" alt=" "/></a>
+											<a href="Womens?MaLoai=vay_woman"><img src="public/images//top1.jpg" alt=" "/></a>
 										</div>
 										<div class="clearfix"></div>
 									</div>
@@ -149,33 +149,33 @@
 									<div class="agile_inner_drop_nav_info">
 										<div class="col-sm-3 multi-gd-img">
 											<ul class="multi-column-dropdown">
-												<li><a href="children.jsp">ÁO SƠ MI BÉ TRAI</a></li>
-												<li><a href="children.jsp">ÁO JEAN BÉ TRAI</a></li>
-												<li><a href="children.jsp">ÁO THUNG BÉ TRAI</a></li>
-												<li><a href="children.jsp">ĐỒ BỘ BÉ TRAI</a></li>
-												<li><a href="children.jsp">ÁO KHOÁC BÉ TRAI</a></li>
-												<li><a href="children.jsp">GIÀY BÉ TRAI</a></li>
-												<li><a href="children.jsp">GIÀY BÉ GÁI</a></li>
-												<li><a href="children.jsp">NÓN BÉ TRAI</a></li>
+												<li><a href="Childrens?MaLoai=children_somi_boy">ÁO SƠ MI BÉ TRAI</a></li>
+												<li><a href="Childrens?MaLoai=children_aokhoac_boy">ÁO JEAN BÉ TRAI</a></li>
+												<li><a href="Childrens?MaLoai=children_aothung_girl">ÁO THUNG BÉ TRAI</a></li>
+												<li><a href="Childrens?MaLoai=children_dobo_boy">ĐỒ BỘ BÉ TRAI</a></li>
+												<li><a href="Childrens?MaLoai=children_aokhoac_boy">ÁO KHOÁC BÉ TRAI</a></li>
+												<li><a href="Childrens?MaLoai=children_giay_boy">GIÀY BÉ TRAI</a></li>
+												<li><a href="Childrens?MaLoai=children_giay_girl">GIÀY BÉ GÁI</a></li>
+												<li><a href="Childrens?MaLoai=children_non_boy">NÓN BÉ TRAI</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-3 multi-gd-img">
 											<ul class="multi-column-dropdown">
-												<li><a href="children.jsp">ÁO SƠ MI BÉ GÁI</a></li>
-												<li><a href="children.jsp">ÁO THUNG BÉ GÁI</a></li>
-												<li><a href="children.jsp">ĐẦM BÉ GÁI</a></li>
-												<li><a href="children.jsp">QUẦN JEAN BÉ GÁI</a></li>
-												<li><a href="children.jsp">ÁO KHOÁC BÉ GÁI</a></li>
-												<li><a href="children.jsp">NÓN BÉ GÁI</a></li>
-												<li><a href="children.jsp">TRANG SỨC BÉ TRAI</a></li>
-												<li><a href="children.jsp">TRANG SỨC BÉ GÁI</a></li>
+												<li><a href="Childrens?MaLoai=children_aokhoac_girl">ÁO SƠ MI BÉ GÁI</a></li>
+												<li><a href="Childrens?MaLoai=children_aothung_girl">ÁO THUNG BÉ GÁI</a></li>
+												<li><a href="Childrens?MaLoai=children_dam_girl">ĐẦM BÉ GÁI</a></li>
+												<li><a href="Childrens?MaLoai=children_jean_girl">QUẦN JEAN BÉ GÁI</a></li>
+												<li><a href="Childrens?MaLoai=children_aokhoac_girl">ÁO KHOÁC BÉ GÁI</a></li>
+												<li><a href="Childrens?MaLoai=children_non_girl">NÓN BÉ GÁI</a></li>
+												<li><a href="Childrens?MaLoai=">TRANG SỨC BÉ TRAI</a></li>
+												<li><a href="Childrens?MaLoai=">TRANG SỨC BÉ GÁI</a></li>
 											</ul>
 										</div>
 	                                    
 	                                   
 	                                    
 										<div class="col-sm-6 multi-gd-img multi-gd-text ">
-											<a href="children.jsp"><img src="public/images//top1.jpg" alt=" "/></a>
+											<a href="Childrens?MaLoai="><img src="public/images//top1.jpg" alt=" "/></a>
 										</div>
 										<div class="clearfix"></div>
 									</div>
@@ -188,7 +188,7 @@
 			</div>
 			<div class="top_nav_right">
 				<div class="wthreecartaits wthreecartaits2 cart cart box_1"> 
-					<form action="cart.jsp" method="post" class="last"> 
+					<form action="Cart" method="post" class="last"> 
 						<input type="hidden" name="cmd" value="_cart">
 						<input type="hidden" name="display" value="1">
 						<button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
@@ -219,7 +219,7 @@
 					<h3 class="agileinfo_sign">Sign In <span>Now</span></h3>
 								<form action="#" method="post">
 						<div class="styled-input agile-styled-input-top">
-							<input type="text" name="Name" required="">
+							<input type="text" name="NamCarte" required="">
 							<label>Name</label>
 							<span></span>
 						</div>

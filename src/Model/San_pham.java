@@ -13,8 +13,12 @@ public class San_pham {
 		String Sqlquerry="exec Lay_san_pham_theo_ma_loai 'aothun_woman'";
 		return this.data.executeQuerry(Sqlquerry);
 	}	
-	public ResultSet getSan_pham_ma_loai() {
-		String Sqlquerry="exec Lay_san_pham_theo_ma_loai 'aothun_woman'";
+	public ResultSet getSan_pham_ma_loai(String Maloai) {
+		String Sqlquerry="select * from LaySanPhamTheoMa('" + Maloai+"')";
+		return this.data.executeQuerry(Sqlquerry);
+	}
+	public ResultSet getSan_pham_ma_san_pham(String MaSanPham) {
+		String Sqlquerry="select * from LaySanPhamTheoMaSanPham('" +MaSanPham+"')";
 		return this.data.executeQuerry(Sqlquerry);
 	}
 	

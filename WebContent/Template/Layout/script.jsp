@@ -2,7 +2,7 @@
 
 
 	<script src="public/js/modernizr.custom.js"></script>
-		<!-- Custom-JavaScript-File-Links --> 
+	
 	
 		<script src="public/js/minicart.min.js"></script>
 	<script>
@@ -16,11 +16,9 @@
 		}
 	</script>
 	
-		<!-- //cart-js --> 
-		<!-- single -->
+		
 	<script type="text/javascript" src="public/js/imagezoom.js"></script>
-	<!-- single -->
-	<!-- script for responsive tabs -->						
+							
 	<script src="public/js/easy-responsive-tabs.js"></script>
 	<script>
 		$(document).ready(function () {
@@ -44,7 +42,6 @@
 		});
 		});
 	</script>
-	<!-- FlexSlider -->
 	<script src="public/js/jquery.flexslider.js"></script>
 							<script>
 							// Can also be used with $(document).ready()
@@ -55,14 +52,12 @@
 									});
 								});
 							</script>
-						<!-- //FlexSlider-->
-	<!-- //script for responsive tabs -->		
-	<!-- start-smoth-scrolling -->
+
 	<script type="text/javascript" src="public/js/move-top.js"></script>
 	<script type="text/javascript" src="public/js/jquery.easing.min.js"></script>
 	
 	
-	<!-- here stars scrolling icon -->
+	
 		<script type="text/javascript">
 			$(document).ready(function() {
 				/*
@@ -78,9 +73,7 @@
 									
 				});
 		</script>
-	<!-- //here ends scrolling icon -->
-	
-	<!-- for bootstrap working -->
+
 	<script type="text/javascript" src="public/js/bootstrap.js"></script>
 	
 	

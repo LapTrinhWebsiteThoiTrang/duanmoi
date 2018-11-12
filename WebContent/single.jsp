@@ -1,5 +1,10 @@
+<%@page import="java.sql.ResultSet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <% 
+    	ResultSet SanPham=(ResultSet)request.getAttribute("SP");
+    
+    %>
 <!DOCTYPE html>
 <html lang="en">
 	<%@ include file="Template/Layout/head.jsp" %>
@@ -12,10 +17,11 @@
      <div class="col-md-4 single-right-left ">
         <div class="grid images_3_of_2">
             <div class="">
-                
+         <%while(SanPham.next())
+        	 {%>       
                 <ul class="slides">
-                    <li data-thumb="public/images/d2.jpg">
-                        <div class="thumb-image"> <img src="public/images/d2.jpg" data-imagezoom="true" class="img-responsive"> 
+                    <li data-thumb="public/images/<%=SanPham.getString("MaLoai")+"/"+ SanPham.getString("Hinh")%>">
+                        <div class="thumb-image"> <img src="public/images/<%=SanPham.getString("MaLoai")+"/"+ SanPham.getString("Hinh")%>" data-imagezoom="true" class="img-responsive"> 
                         </div>
                     </li>
                    
@@ -25,10 +31,15 @@
         </div>
     </div>
     <div class="col-md-8 single-right-left simpleCart_shelfItem">
-        <h3>Big Wing Sneakers  (Navy)</h3>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h3><%=SanPham.getString("TenSanPham")%></h3>
+        <p class="card-text"><%=SanPham.getString("MoTaSanPham")%></p>
         
-        <p><span class="item_price">$650</span> <del>- $900</del></p>
+        <p><span class="item_price"><%= SanPham.getInt("DonGia")-SanPham.getInt("Sale")*SanPham.getInt("DonGia")/100%></span> 
+        <del><%if(SanPham.getInt("Sale")!=0)
+					{
+        				SanPham.getInt("DonGia");
+					}
+						%></del></p>
         <div class="rating1">
             <span class="starRating">
                 <input id="rating5" type="radio" name="rating" value="5">
@@ -47,20 +58,18 @@
         
         <div class="occasion-cart">
             <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                <form action="#" method="post">
-                    <fieldset>
-                        <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="add" value="1">
-                        <input type="hidden" name="business" value=" ">
-                        <input type="hidden" name="item_name" value="Wing Sneakers">
-                        <input type="hidden" name="amount" value="650.00">
-                        <input type="hidden" name="discount_amount" value="1.00">
-                        <input type="hidden" name="currency_code" value="USD">
-                        <input type="hidden" name="return" value=" ">
-                        <input type="hidden" name="cancel_return" value=" ">
-                        <input type="submit" name="submit" value="Add to cart" class="button">
-                    </fieldset>
-                </form>
+                <form action="Cart" method="post">
+						<fieldset>
+							<input type="hidden" name="Maloai" value="<%= SanPham.getString("Maloai")%>" />
+							<input type="hidden" name="MaSanPham" value="<%= SanPham.getString("MaSanPham")%>" />
+							<input type="hidden" name="TenSanPham" value=" <%= SanPham.getString("TenSanPham")%>" />
+							<input type="hidden" name="DonGia" value="<%= SanPham.getInt("DonGia")-SanPham.getInt("Sale")*SanPham.getInt("DonGia")/100%>" />
+							<input type="hidden" name="Hinh" value="<%= SanPham.getString("Hinh")%>" />
+							<input type="hidden" name="MoTaSanPham" value="<%= SanPham.getString("MoTaSanPham")%>" />
+							<input type="hidden" name="Sale" value="<%= SanPham.getInt("Sale")%>" />
+							<input type="submit" name="submit" value="Add to cart" class="button" />
+						</fieldset>
+					</form>
             </div>
                                 
         </div>
@@ -81,6 +90,7 @@
         </ul>
 
   </div>
+  <%} %>
     <div class="clearfix"> </div>
     
  </div>

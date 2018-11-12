@@ -1,3 +1,4 @@
+<%@page import="java.sql.ResultSet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -183,38 +184,40 @@
 
 
 <div class="single-pro">
-<% for(int i=1;i<=12;++i) {%>
+<% 
+	ResultSet SanPham= (ResultSet)request.getAttribute("DSSP");
+	while(SanPham.next())
+	{
+%>
 	<div class="col-md-3 product-men">
 		<div class="men-pro-item simpleCart_shelfItem">
 			<div class="men-thumb-item">
-				<img src="public/images/<%="kaki_men/kaki_men"+ Integer.toString(i)%>.jpg" alt="" class="pro-image-front">
-				<img src="public/images/<%="kaki_men/kaki_men"+ Integer.toString(i)%>.jpg" alt="" class="pro-image-back">
+				<img src="public/images/<%= SanPham.getString("MaLoai")+"/"+ SanPham.getString("Hinh")%>" alt="" class="pro-image-front">
+				<img src="public/images/<%= SanPham.getString("MaLoai")+"/"+ SanPham.getString("Hinh")%>" alt="" class="pro-image-back">
 					<div class="men-cart-pro">
 						<div class="inner-men-cart-pro">
-							<a href="single.jsp" class="link-product-add-cart">Quick View</a>
+							<a href="Single?MaSanPham=<%=SanPham.getString("MaSanPham") %>" class="link-product-add-cart">Quick View</a>
 						</div>
 					</div>
 					<span class="product-new-top">New</span>
 					
 			</div>
 			<div class="item-info-product ">
-				<h4><a href="single.html">Formal Blue Shirt</a></h4>
+				<h4><a href="Single?MaSanPham=<%=SanPham.getString("MaSanPham") %>"><%=SanPham.getString("TenSanPham") %></a></h4>
 				<div class="info-product-price">
-					<span class="item_price">$45.99</span>
-					<del>$69.71</del>
+					<span class="item_price"><%=SanPham.getString("DonGia") %></span>
+					<del></del>
 				</div>
 				<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form action="#" method="post">
+					<form action="Cart" method="post">
 						<fieldset>
-							<input type="hidden" name="cmd" value="_cart" />
-							<input type="hidden" name="add" value="1" />
-							<input type="hidden" name="business" value=" " />
-							<input type="hidden" name="item_name" value="Formal Blue Shirt" />
-							<input type="hidden" name="amount" value="44.99" />
-							<input type="hidden" name="discount_amount" value="2.00" />
-							<input type="hidden" name="currency_code" value="USD" />
-							<input type="hidden" name="return" value=" " />
-							<input type="hidden" name="cancel_return" value=" " />
+							<input type="hidden" name="Maloai" value="<%= SanPham.getString("Maloai")%>" />
+							<input type="hidden" name="MaSanPham" value="<%= SanPham.getString("MaSanPham")%>" />
+							<input type="hidden" name="TenSanPham" value=" <%= SanPham.getString("TenSanPham")%>" />
+							<input type="hidden" name="DonGia" value="<%= SanPham.getInt("DonGia")-SanPham.getInt("Sale")*SanPham.getInt("DonGia")/100%>" />
+							<input type="hidden" name="Hinh" value="<%= SanPham.getString("Hinh")%>" />
+							<input type="hidden" name="MoTaSanPham" value="<%= SanPham.getString("MoTaSanPham")%>" />
+							<input type="hidden" name="Sale" value="<%= SanPham.getInt("Sale")%>" />
 							<input type="submit" name="submit" value="Add to cart" class="button" />
 						</fieldset>
 					</form>
@@ -223,7 +226,7 @@
 			</div>
 		</div>
 	</div>
-<%}%>
+<%} %>
 <div class="clearfix"></div>
 </div>
 

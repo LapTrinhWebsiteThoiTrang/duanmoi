@@ -1,5 +1,12 @@
+<%@page import="java.sql.ResultSet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    
+    <%
+    	ResultSet sp=(ResultSet)request.getAttribute("DSSP");
+    	
+    %>
 <!DOCTYPE html>
 <html lang="en">
 	<%@ include file="Template/Layout/head.jsp" %>
@@ -26,38 +33,43 @@
 
 		
 <div class="single-pro">
-<% for(int i=1;i<=12;++i) {%>
+<% while(sp.next())
+{
+
+%>
 	<div class="col-md-3 product-men">
 		<div class="men-pro-item simpleCart_shelfItem">
 			<div class="men-thumb-item">
-				<img src="public/images/<%="quantay_woman/quantay_woman"+ Integer.toString(i)%>.jpg" alt="" class="pro-image-front">
-				<img src="public/images/<%="quantay_woman/quantay_woman"+ Integer.toString(i)%>.jpg" alt="" class="pro-image-back">
+				<img src="public/images/<%=sp.getString("MaLoai")+"/"+sp.getString("Hinh")%>" alt="" class="pro-image-front">
+				<img src="public/images/<%=sp.getString("MaLoai")+"/"+sp.getString("Hinh")%>" alt="" class="pro-image-back">
 					<div class="men-cart-pro">
 						<div class="inner-men-cart-pro">
-							<a href="single.jsp" class="link-product-add-cart">Quick View</a>
+							<a href="Single?MaSanPham=<%=sp.getString("MaSanPham") %>" class="link-product-add-cart">Quick View</a>
 						</div>
 					</div>
 					<span class="product-new-top">New</span>
 					
 			</div>
 			<div class="item-info-product ">
-				<h4><a href="single.html">Formal Blue Shirt</a></h4>
+				<h4><a href="single.html"><%=sp.getString("TenSanPham") %></a></h4>
 				<div class="info-product-price">
-					<span class="item_price">$45.99</span>
-					<del>$69.71</del>
+					<span class="item_price"><%= sp.getInt("DonGia")-sp.getInt("Sale")*sp.getInt("DonGia")/100%></span>
+					<del><%if(sp.getInt("Sale")!=0)
+					{
+						sp.getInt("DonGia");
+					}
+						%></del>
 				</div>
 				<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form action="#" method="post">
+					<form action="Cart" method="post">
 						<fieldset>
-							<input type="hidden" name="cmd" value="_cart" />
-							<input type="hidden" name="add" value="1" />
-							<input type="hidden" name="business" value=" " />
-							<input type="hidden" name="item_name" value="Formal Blue Shirt" />
-							<input type="hidden" name="amount" value="44.99" />
-							<input type="hidden" name="discount_amount" value="2.00" />
-							<input type="hidden" name="currency_code" value="USD" />
-							<input type="hidden" name="return" value=" " />
-							<input type="hidden" name="cancel_return" value=" " />
+							<input type="hidden" name="Maloai" value="<%= sp.getString("Maloai")%>" />
+							<input type="hidden" name="MaSanPham" value="<%= sp.getString("MaSanPham")%>" />
+							<input type="hidden" name="TenSanPham" value=" <%= sp.getString("TenSanPham")%>" />
+							<input type="hidden" name="DonGia" value="<%= sp.getInt("DonGia")-sp.getInt("Sale")*sp.getInt("DonGia")/100%>" />
+							<input type="hidden" name="Hinh" value="<%= sp.getString("Hinh")%>" />
+							<input type="hidden" name="MoTaSanPham" value="<%= sp.getString("MoTaSanPham")%>" />
+							<input type="hidden" name="Sale" value="<%= sp.getInt("Sale")%>" />
 							<input type="submit" name="submit" value="Add to cart" class="button" />
 						</fieldset>
 					</form>
