@@ -47,7 +47,7 @@
 		<div class="items">
 
 			<div class="item1">
-				<div class="<%= Arr_class_san_pham.get(i).MaSanPham %>" >
+				<div class="<%= Arr_class_san_pham.get(i).MaSanPham %>">
 					<div class="alert-close1"> </div>
 					<div class="image1">
 						<img src="public/images/<%=Arr_class_san_pham.get(i).MaLoai%>/<%=Arr_class_san_pham.get(i).Hinh %>" alt="item1">
@@ -76,37 +76,83 @@
 				
 		<div class="checkout" align="center">
 			
-			<div class="checkout-btn" >
+			<div class="checkout-btn" name="dathang">
 				<a href="order.jsp">Đặt hàng</a>
 			</div>
 			<div class="clear"></div>
 		</div>
 	</div>	
 </div>
-
-
 	<%@ include file="Template/Layout/footer.jsp" %>
 	<%@ include file="Template/Layout/script.jsp" %>
 	
 	<script>$(document).ready(function(c) {
 		$('.alert-close1').on('click', function(c){
-			$('."<%= Arr_class_san_pham.get(i).MaSanPham %>"').fadeOut('slow', function(c){
-		  		$('.close1').remove();
+			$("<%="."+Arr_class_san_pham.get(0).MaSanPham %>").fadeOut('slow', function(c){
+		  		$("<%="."+Arr_class_san_pham.get(0).MaSanPham %>").remove();
 			});
 		});	  
 	});
 	</script>
 
 	
-	<!-- <script>$(document).ready(function(c) {
+	<script>$(document).ready(function(c) {
 		$('.alert-close1').on('click', function(c){
-			$('#Son').fadeOut('slow', function(c){
-		  		$('#Son').remove();
-		  		
+			let _ = $(this);
+			let masp = _.parent('div').attr('class');
+			$.ajax({
+				url: 'Cart',
+				type: 'POST',
+				method: 'POST',
+				data:{
+					'fun': 'xoa',
+					masp
+				},
+				success: function(result){
+					if(result == 'true'){
+						alert('Xoa thanh Cong');
+						_.parent('div').parent('div').remove();
+					}
+					else{
+						alert('Xoa Khong thanh cong');	
+					}
+				}
 			});
 		});	  
-	});
+	})
 	</script>
-	 -->
+	
+	
+	<script>
+	
+	$( ".dathang a" ).on(function(e) {
+		e.preventDefault();//ngan chan lai chua cho gui du lieu
+		  let _ = $(this);
+		  $.ajax({
+			 url: 'Oder',
+			 type: 'POST',
+			 method: 'POST',
+			 data: {
+				 'fun': 'Dathang',
+				 'hovaten': _.find('[name="hovaten"]').val(),
+				 'tel_order': _.find('[name="tel_order"]').val(),
+				 'email_order': _.find('[name="email_order"]').val(),
+				 'tinhthanh': _.find('[name="tinhthanh"]').val(),
+				 'quanhuyen': _.find('[name="quanhuyen"]').val(),
+				 'phuongxa': _.find('[name="phuongxa"]').val(),
+				 '"diachi"': _.find('[name=""diachi""]').val()
+			 },
+			 success: function(result){
+				 if(result == 'true'){
+					 location.href = 'cart.jsp';
+				 }
+			 }
+		  });
+		});
+	</script>
+	
+	
+	
+	
 </body>
 </html>
