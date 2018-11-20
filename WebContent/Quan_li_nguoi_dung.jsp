@@ -45,7 +45,6 @@
                 <div class="khungchuaNoiDungQuanLi">
                     <table id="table">
                         <tr>
-                            <th>Mã User</th>
                             <th>Tài Khoản</th>
                             <th>Mật khẩu</th>
                             <th>Thời gian đăng ký</th>

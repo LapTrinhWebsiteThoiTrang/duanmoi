@@ -88,15 +88,15 @@
 	<%@ include file="Template/Layout/footer.jsp" %>
 	<%@ include file="Template/Layout/script.jsp" %>
 	
-	<script>$(document).ready(function(c) {
+	<%-- <script>$(document).ready(function(c) {
 		$('.alert-close1').on('click', function(c){
 			$('."<%= Arr_class_san_pham.get(i).MaSanPham %>"').fadeOut('slow', function(c){
 		  		$('.close1').remove();
 			});
 		});	  
 	});
-	</script>
-
+	</script> --%>
+	
 	
 	<!-- <script>$(document).ready(function(c) {
 		$('.alert-close1').on('click', function(c){

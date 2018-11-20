@@ -12,7 +12,6 @@
     flex-direction: row;
     justify-content: space-between;
     background: white;
-    overflow: hidden;
 }
 
 .button-group {
@@ -44,7 +43,7 @@
 
 .spdaxem__item {
     width: 23%;
-    overflow: hidden;
+  	overflow: hidden;
     margin: 5px;
 }
 

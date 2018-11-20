@@ -10,10 +10,10 @@ import com.microsoft.sqlserver.jdbc.SQLServerDriver;
 public class Database {
 
 	private String port="1433";
-	private String hostname = "192.168.1.4";
+	private String hostname = "192.168.0.122";
 	private String database="websiteThoiTrang";
-	private String userName="Son_Web";
-	private String password="Son1998#";
+	private String userName="thanhweb";
+	private String password="soncay";
 	private Connection cont;
 	private Statement st;
 	private ResultSet rs;

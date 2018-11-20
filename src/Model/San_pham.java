@@ -21,5 +21,20 @@ public class San_pham {
 		String Sqlquerry="select * from LaySanPhamTheoMaSanPham('" +MaSanPham+"')";
 		return this.data.executeQuerry(Sqlquerry);
 	}
-	
+	public ResultSet laySanPhamTheoLoai(String MaLoai) {
+		String Sqlquerry="exec laySanPhamTheoLoai " + MaLoai;
+		return this.data.executeQuerry(Sqlquerry);
+	}
+	public ResultSet TraLoaiSP() {
+		String Sqlquerry="select * from TraLoaiSP() " ;
+		return this.data.executeQuerry(Sqlquerry);
+	}
+	public ResultSet LayTenLoai(String MaLoai) {
+		String Sqlquerry ="exec TraVeTenKhiCoMaLoai "+ MaLoai ;
+		return this.data.executeQuerry(Sqlquerry);
+	}
+	public ResultSet XoaSanPhamKhiBietMa(String MaSP) {
+		String Sqlquerry="exec XoaSanPhamKhiBietMa " + MaSP;
+		return this.data.executeQuerry(Sqlquerry);
+	}
 }

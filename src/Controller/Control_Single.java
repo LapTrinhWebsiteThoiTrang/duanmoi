@@ -31,7 +31,7 @@ public class Control_Single extends HttpServlet {
 		RequestDispatcher dispatcher=request.getRequestDispatcher("single.jsp");
 		try {
 			
-			sp = new San_pham();
+			sp = new San_pham(); 
 			ResultSet rs= sp.getSan_pham_ma_san_pham(MaSanPham);
 			
 			request.setAttribute("SP", rs);
