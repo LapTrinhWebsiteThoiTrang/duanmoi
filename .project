@@ -3,7 +3,10 @@
 	<name>DoAnLapTrinhWebsite_ThoiTrang</name>
 	<comment></comment>
 	<projects>
+		<project>DoAnWebsite_ThoiTrang2</project>
+		<project>RemoteSystemsTempFiles</project>
 		<project>Servers</project>
+		<project>session</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

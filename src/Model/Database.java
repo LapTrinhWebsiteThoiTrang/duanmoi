@@ -10,7 +10,11 @@ import com.microsoft.sqlserver.jdbc.SQLServerDriver;
 public class Database {
 
 	private String port="1433";
+<<<<<<< HEAD
 	private String hostname = "192.168.0.122";
+=======
+	private String hostname = "192.168.1.8";
+>>>>>>> d8f453d8625b70c7b971e828e8e9fd52f2d90eaf
 	private String database="websiteThoiTrang";
 	private String userName="thanhweb";
 	private String password="soncay";
