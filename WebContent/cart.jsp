@@ -5,6 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
    <% 
+   
    		List<Class_San_Pham> Arr_class_san_pham=new ArrayList<Class_San_Pham>();
    		if(session.getAttribute("Arr_class_san_pham")!=null)
    		{
@@ -57,7 +58,7 @@
 					</div>
 					<div class="quantity1">
 						<form action="action_page.php">
-							<input type="number" name="quantity" min="1" max="10" value="1">
+							<input type="number" name="SoLuong" min="1" max="10" value="1">
 						</form>
 					</div>
 					<div class="price1">
@@ -77,7 +78,9 @@
 		<div class="checkout" align="center">
 			
 			<div class="checkout-btn" name="dathang">
+			
 				<a href="order.jsp">Đặt hàng</a>
+			
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -86,14 +89,6 @@
 	<%@ include file="Template/Layout/footer.jsp" %>
 	<%@ include file="Template/Layout/script.jsp" %>
 	
-	<script>$(document).ready(function(c) {
-		$('.alert-close1').on('click', function(c){
-			$("<%="."+Arr_class_san_pham.get(0).MaSanPham %>").fadeOut('slow', function(c){
-		  		$("<%="."+Arr_class_san_pham.get(0).MaSanPham %>").remove();
-			});
-		});	  
-	});
-	</script>
 
 	
 	<script>$(document).ready(function(c) {
@@ -114,7 +109,7 @@
 						_.parent('div').parent('div').remove();
 					}
 					else{
-						alert('Xoa Khong thanh cong');	
+						alert('Xoa Khong thanh cong');
 					}
 				}
 			});
@@ -123,33 +118,6 @@
 	</script>
 	
 	
-	<script>
-	
-	$( ".dathang a" ).on(function(e) {
-		e.preventDefault();//ngan chan lai chua cho gui du lieu
-		  let _ = $(this);
-		  $.ajax({
-			 url: 'Oder',
-			 type: 'POST',
-			 method: 'POST',
-			 data: {
-				 'fun': 'Dathang',
-				 'hovaten': _.find('[name="hovaten"]').val(),
-				 'tel_order': _.find('[name="tel_order"]').val(),
-				 'email_order': _.find('[name="email_order"]').val(),
-				 'tinhthanh': _.find('[name="tinhthanh"]').val(),
-				 'quanhuyen': _.find('[name="quanhuyen"]').val(),
-				 'phuongxa': _.find('[name="phuongxa"]').val(),
-				 '"diachi"': _.find('[name=""diachi""]').val()
-			 },
-			 success: function(result){
-				 if(result == 'true'){
-					 location.href = 'cart.jsp';
-				 }
-			 }
-		  });
-		});
-	</script>
 	
 	
 	

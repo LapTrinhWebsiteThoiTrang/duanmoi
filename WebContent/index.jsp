@@ -218,6 +218,7 @@
 							<input type="hidden" name="Hinh" value="<%= SanPham.getString("Hinh")%>" />
 							<input type="hidden" name="MoTaSanPham" value="<%= SanPham.getString("MoTaSanPham")%>" />
 							<input type="hidden" name="Sale" value="<%= SanPham.getInt("Sale")%>" />
+							<input type="hidden" name="SoLuong" value="1" />
 							<input type="submit" name="submit" value="Add to cart" class="button" />
 						</fieldset>
 					</form>
@@ -252,7 +253,8 @@
 				 'DonGia': _.find('[name="DonGia"]').val(),
 				 'Hinh': _.find('[name="Hinh"]').val(),
 				 'Sale': _.find('[name="Sale"]').val(),
-				 'MoTaSanPham': _.find('[name="MoTaSanPham"]').val()
+				 'MoTaSanPham': _.find('[name="MoTaSanPham"]').val(),
+				 'SoLuong': _.find('[name="SoLuong"]').val()
 			 },
 			 success: function(result){
 				 if(result == 'true'){

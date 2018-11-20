@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.websocket.Session;
 
 import Library.Class_San_Pham;
 import Model.San_pham;
@@ -65,7 +64,8 @@ public class Control_Cart extends HttpServlet {
 			class_san_pham.DonGia=Integer.parseInt(request.getParameter("DonGia"));
 			class_san_pham.Sale=Integer.parseInt(request.getParameter("Sale"));
 			class_san_pham.Hinh=(String)request.getParameter("Hinh");
-
+			class_san_pham.SoLuong=Integer.parseInt(request.getParameter("SoLuong"));
+			
 			Arr_class_san_pham.add(class_san_pham);
 			HttpSession session = request.getSession();
 			session.setAttribute("Arr_class_san_pham", Arr_class_san_pham);
@@ -75,7 +75,6 @@ public class Control_Cart extends HttpServlet {
 
 
 	private void xoaSanPhamTrongSession(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		// TODO Auto-generated method stub
 		String masp = request.getParameter("masp");
 		HttpSession session = request.getSession();
 		for(int i = 0; i< Arr_class_san_pham.size(); i++) {

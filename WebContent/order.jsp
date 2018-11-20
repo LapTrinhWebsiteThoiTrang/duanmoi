@@ -10,16 +10,13 @@
 	<div class="div_order">
 	<section id="content" align="center" >
 		<div style="background-color: #f3f3f3">		
-			<form class="formoder">	
+		<form class="formoder">	
             <table cellpadding="2" cellspacing="12px"  align="center" width="900px" >
               <caption><h1  align="center">ĐẶT HÀNG SẢN PHẨM</h1></caption>
                <tr>
                     <td class="right">Họ và tên:</td>
-                    
                     <td class="left"><input name="hovaten" type="text" placeholder="họ tên"/>
-                    	<span id="lblhoten" style="color: #FF0004"> </span></td>                   
-               
-                                     
+                    	<span id="lblhoten" style="color: #FF0004"> </span></td>                                       
                 </tr>
                 <tr>
                     <td class="right">Email:</td>
@@ -65,18 +62,14 @@
                         </select>
                         <span id="lblnnghiep" style="color: #FF0004"></span>
                     </td>                 
-               
-                    
-                </tr>
-               
                                 
-                
+                </tr>                                                       
                 <tr>
                     <td class="right">Địa chỉ nhà:</td>
                     <td colspan="3"><textarea name="diachi" placeholder="Địa chỉ"></textarea></td>                   
                 </tr>
                 <tr><td colspan="4" align="center">
-                    <input type="submit" value="Hoàn tất"/>
+                    <input type="submit" name="submit" value="Hoàn tất"/>
                 </td></tr>
             </table>
 			</form>
@@ -104,7 +97,7 @@
 				 'tinhthanh': _.find('[name="tinhthanh"]').val(),
 				 'quanhuyen': _.find('[name="quanhuyen"]').val(),
 				 'phuongxa': _.find('[name="phuongxa"]').val(),
-				 '"diachi"': _.find('[name=""diachi""]').val()
+				 'diachi': _.find('[name=""diachi""]').val()
 			 },
 			 success: function(result){
 				 if(result == 'true'){
