@@ -18,19 +18,17 @@ public class KhachHang {
 	}
 	public void ThemKhachHang()
 	{
-		String sql="InsertKhachHang N'"+ TenKhachHang +  "', '"+Email+"','"+SDT+"',N'"+DiaChi+"'";
-		this.data.executeQuerryNoResultSet(sql);
+		this.data.executeQuerry("ThemKhachHang("+TenKhachHang+","+Email+","+SDT+","+DiaChi+")");
 	}
 	public String MaKhachHangKhiIsert()
 	{
-		String sqlquerry="select dbo.PhatSinhMaKhachHang() as MKH";
+		String sqlquerry="select dbo.PhatSinhMaKhachHang()";
 		String kq=null;
 		ResultSet resultSet=this.data.executeQuerry(sqlquerry);
 			try {
-				
-				while (resultSet.next() && resultSet.getRow() > 0)
+				while (resultSet.next())
 				{
-					kq= resultSet.getString("MKH");
+					kq= resultSet.getString(0);
 					return  kq;
 				}
 			} catch (SQLException e) {

@@ -17,10 +17,10 @@ public class ChiTietHoaDon {
 		 this.data=new Database();
 		}
 	
-	public void ThemChiTietHoaDon(String MaHoaDon,String MaSanPham,String size,int SoLuong,int DonGia)
+	public void ThemChiTietHoaDon(String MaSanPham,String MaHoaDon,String size,int SoLuong,int DonGia)
 	{
-		String sql="ThemChiTietHoaDon "+MaHoaDon+","+MaSanPham+","+size+","+SoLuong+","+DonGia;
-		this.data.executeQuerryNoResultSet(sql);
+		String sql="ThemChiTietHoaDon "+MaSanPham+","+MaHoaDon+","+size+","+SoLuong+","+DonGia;
+		this.data.executeQuerry(sql);
 		
 	}
 	

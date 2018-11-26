@@ -34,7 +34,7 @@ public class Control_chirdren extends HttpServlet {
 			sp = new San_pham();
 			if(MaLoai == null || MaLoai.length() == 0)
 			{
-				MaLoai="children_giay_boy";
+				MaLoai="children_somi_girl";
 			}
 			ResultSet rs= sp.getSan_pham_ma_loai(MaLoai);
 			

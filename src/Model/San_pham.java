@@ -37,4 +37,8 @@ public class San_pham {
 		String Sqlquerry="exec XoaSanPhamKhiBietMa " + MaSP;
 		return this.data.executeQuerry(Sqlquerry);
 	}
+	public ResultSet XoaLoaiSanPham(String MaLoai) {
+		String Sqlquerry="exec XoaALL_SPcuaLoai " + MaLoai;
+		return this.data.executeQuerry(Sqlquerry);
+	}
 }

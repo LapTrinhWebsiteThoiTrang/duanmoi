@@ -35,9 +35,9 @@ public class Control_Load_SP extends HttpServlet {
 		// TODO Auto-generated method stub
 		San_pham sp;
 		String MaLoai= request.getParameter("MaLoai");
+		String Lenh=request.getParameter("Lenh");
 		RequestDispatcher dispatcher =request.getRequestDispatcher("Quan_li_san_pham.jsp");
 		try {
-				//	"children_aothun_boy";
 			sp = new San_pham();						
 			ResultSet rs2= sp.TraLoaiSP();
 			request.setAttribute("LSP", rs2);
@@ -45,8 +45,7 @@ public class Control_Load_SP extends HttpServlet {
 			{
 				ResultSet rs1= sp.laySanPhamTheoLoai(MaLoai);	
 				request.setAttribute("DSSP", rs1);
-				LayTenLoai(request, response, "MaLoai");
-			}		
+			}	
 		} catch (ClassNotFoundException | SQLException e2) {
 			e2.printStackTrace();
 		}
@@ -55,6 +54,12 @@ public class Control_Load_SP extends HttpServlet {
 		if(MaSanPhamCanXoa!=null)
 		{
 			XoaSP(request,response,MaSanPhamCanXoa);
+		}
+		
+		String MaLoaiCanXoa=request.getParameter("MaLoaiCanXoa");
+		if(MaLoaiCanXoa!=null)
+		{
+			XoaTatCaSPcua_Loai(request, response, MaLoaiCanXoa);
 		}
 		
 		dispatcher.forward(request, response);
@@ -72,6 +77,20 @@ public class Control_Load_SP extends HttpServlet {
 			e2.printStackTrace();
 		} 
 	}
+	//xoa tat ca Sp
+	private void XoaTatCaSPcua_Loai(HttpServletRequest request, HttpServletResponse response, String MaLoaiCanXoa) throws ServletException, IOException{
+		San_pham sp = null;
+		String MaLoai=MaLoaiCanXoa;
+		try {
+			sp=new San_pham();
+			ResultSet rs1= sp.XoaLoaiSanPham(MaLoai);
+			request.setAttribute("XoaLoaiSP", rs1);
+		}
+		catch (ClassNotFoundException | SQLException e2) {
+			e2.printStackTrace();
+		} 
+	}
+	
 	private void LayTenLoai(HttpServletRequest request, HttpServletResponse response, String MaLoai) throws ClassNotFoundException, SQLException {
 		San_pham sp;
 		sp=new San_pham();
