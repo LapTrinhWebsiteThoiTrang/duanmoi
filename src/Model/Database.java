@@ -10,10 +10,12 @@ import com.microsoft.sqlserver.jdbc.SQLServerDriver;
 public class Database {
 
 	private String port="1433";
-	private String hostname = "192.168.0.122";
+
+	private String hostname = "DESKTOP-6AMCBBP";
+
 	private String database="websiteThoiTrang";
-	private String userName="thanhweb";
-	private String password="soncay";
+	private String userName="Son_Web";
+	private String password="Son1998#";
 	private Connection cont;
 	private Statement st;
 	private ResultSet rs;
@@ -47,5 +49,16 @@ public class Database {
 			return null;
 		}
 	}
+	public void executeQuerryNoResultSet(String sqlquerry)
+	{
+		try {
+			st = (Statement) this.cont.createStatement();
+			rs = st.executeQuery(sqlquerry);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
 
 }
