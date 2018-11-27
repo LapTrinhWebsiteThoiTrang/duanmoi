@@ -15,18 +15,18 @@ public class HoaDon {
 	public void ThemHoaDon(String MaKhachHang,int TongTien)
 	{
 		String sql="InsertHoaDon "+MaKhachHang+","+TongTien;
-		this.data.executeQuerryNoResultSet(sql);
+		this.data.executeQuerry(sql);
 	}
 	
 	public String MaHoaDonKhiIsert()
 	{
-		String sqlquerry="select dbo.PhatSinhMaHoaDon() as MHD";
+		String sqlquerry="select dbo.PhatSinhMaHoaDon()";
 		String kq=null;
 		ResultSet resultSet=this.data.executeQuerry(sqlquerry);
 		try {
-			while (resultSet.next()&& resultSet.getRow()>0)
+			while (resultSet.next())
 			{
-				kq= resultSet.getString("MHD");
+				kq= resultSet.getString(0);
 				return  kq;
 			}
 		} catch (SQLException e) {

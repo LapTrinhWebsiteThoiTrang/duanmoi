@@ -39,16 +39,15 @@
 						%></del>
 				</div>
 				<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form class="formsp">
+					<form action="Cart" method="post">
 						<fieldset>
-							<input type="hidden" name="MaLoai" value="<%= sp.getString("Maloai")%>" />
+							<input type="hidden" name="Maloai" value="<%= sp.getString("Maloai")%>" />
 							<input type="hidden" name="MaSanPham" value="<%= sp.getString("MaSanPham")%>" />
 							<input type="hidden" name="TenSanPham" value=" <%= sp.getString("TenSanPham")%>" />
 							<input type="hidden" name="DonGia" value="<%= sp.getInt("DonGia")-sp.getInt("Sale")*sp.getInt("DonGia")/100%>" />
 							<input type="hidden" name="Hinh" value="<%= sp.getString("Hinh")%>" />
 							<input type="hidden" name="MoTaSanPham" value="<%= sp.getString("MoTaSanPham")%>" />
 							<input type="hidden" name="Sale" value="<%= sp.getInt("Sale")%>" />
-							<input type="hidden" name="SoLuong" value="1" />
 							<input type="submit" name="submit" value="Add to cart" class="button" />
 						</fieldset>
 					</form>
@@ -61,37 +60,10 @@
 
 
 
+
 <div class="clearfix"></div>
 </div>
 	<%@ include file="Template/Layout/footer.jsp" %>
 	<%@ include file="Template/Layout/script.jsp" %>
-	
-<script>
-	$( ".formsp" ).on( "submit",function(e) {
-		e.preventDefault();//ngan chan lai chua cho gui du lieu
-		  let _ = $(this);
-		  $.ajax({
-			 url: 'Cart',
-			 type: 'POST',
-			 method: 'POST',
-			 data: {
-				 'fun': 'themsp',
-				 'MaLoai': _.find('[name="MaLoai"]').val(),
-				 'MaSanPham': _.find('[name="MaSanPham"]').val(),
-				 'TenSanPham': _.find('[name="TenSanPham"]').val(),
-				 'DonGia': _.find('[name="DonGia"]').val(),
-				 'Hinh': _.find('[name="Hinh"]').val(),
-				 'Sale': _.find('[name="Sale"]').val(),
-				 'MoTaSanPham': _.find('[name="MoTaSanPham"]').val(),
-				 'SoLuong': _.find('[name="SoLuong"]').val()
-			 },
-			 success: function(result){
-				 if(result == 'true'){
-					 location.href = 'cart.jsp';
-				 }
-			 }
-		  });
-		});
-	</script>
 </body>
 </html>
