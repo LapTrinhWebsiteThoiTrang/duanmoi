@@ -73,15 +73,17 @@
 						%></del>
 				</div>
 				<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form action="Cart" method="post">
+					<form class="formsp">
 						<fieldset>
-							<input type="hidden" name="Maloai" value="<%= SanPham.getString("Maloai")%>" />
+							<input type="hidden" name="MaLoai" value="<%= SanPham.getString("Maloai")%>" />
 							<input type="hidden" name="MaSanPham" value="<%= SanPham.getString("MaSanPham")%>" />
 							<input type="hidden" name="TenSanPham" value=" <%= SanPham.getString("TenSanPham")%>" />
 							<input type="hidden" name="DonGia" value="<%= SanPham.getInt("DonGia")-SanPham.getInt("Sale")*SanPham.getInt("DonGia")/100%>" />
 							<input type="hidden" name="Hinh" value="<%= SanPham.getString("Hinh")%>" />
 							<input type="hidden" name="MoTaSanPham" value="<%= SanPham.getString("MoTaSanPham")%>" />
 							<input type="hidden" name="Sale" value="<%= SanPham.getInt("Sale")%>" />
+							<input type="hidden" name="SoLuong" value="1" />
+							
 							<input type="submit" name="submit" value="Add to cart" class="button" />
 						</fieldset>
 					</form>
@@ -97,5 +99,33 @@
 	
 	<%@ include file="Template/Layout/footer.jsp" %>
 	<%@ include file="Template/Layout/script.jsp" %>
+	<script>
+	$( ".formsp" ).on( "submit",function(e) {
+		e.preventDefault();//ngan chan lai chua cho gui du lieu
+		  let _ = $(this);
+		  $.ajax({
+			 url: 'Cart',
+			 type: 'POST',
+			 method: 'POST',
+			 data: {
+				 'fun': 'themsp',
+				 'MaLoai': _.find('[name="MaLoai"]').val(),
+				 'MaSanPham': _.find('[name="MaSanPham"]').val(),
+				 'TenSanPham': _.find('[name="TenSanPham"]').val(),
+				 'DonGia': _.find('[name="DonGia"]').val(),
+				 'Hinh': _.find('[name="Hinh"]').val(),
+				 'Sale': _.find('[name="Sale"]').val(),
+				 'MoTaSanPham': _.find('[name="MoTaSanPham"]').val(),
+				 'SoLuong': _.find('[name="SoLuong"]').val()
+			 },
+			 success: function(result){
+				 if(result == 'true'){
+					 location.href = 'cart.jsp';
+				 }
+			 }
+		  });
+		});
+	</script>
+	
 </body>
 </html>
